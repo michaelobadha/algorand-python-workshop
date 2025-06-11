@@ -3,7 +3,7 @@
   "sources": [
     "../../personal_bank/contract.py"
   ],
-  "mappings": ";;;;;;;;;;;;AAIA;;AAAA;;;AAAA;;;;;;;;;;;;AAAA;;;AAAA;;;;;;AAAA;;AAqCK;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AA3BA;;AAAA;AAAA;AAAA;;AAAA;AAVL;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAUK;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAVL;;AAAA;;;;;;;;;AAUA;;;AAcY;;AAAA;;AAAoB;;AAApB;AADJ;AAGO;;AAAA;;AAAA;AAAP;AAE+C;;AAAA;;AAAA;AAAtB;AAAA;;AAEjC;;;AACY;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAIG;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAP;;AAAA;AAFI;;AAAA;AAAA;;AAAA;AAAA;;;;AAc2C;;AAAtB;AAAA;AAAA;AACzB;AAAA;AAES;AACI;;;;;;AADJ;;;AAGD;;;AAHC;;;AAMO;;AAAc;AAA9B;AAAA;AAEA",
+  "mappings": ";;;;;;;;;;;;AAIA;;AAAA;;;AAAA;;;;;;;;;;;;AAAA;;;AAAA;;;;;;AAAA;;AAqCK;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AA3BA;;AAAA;AAAA;AAAA;;AAAA;AAVL;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAUK;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAVL;;AAAA;;;;;;;;;AAUA;;;AAcY;;AAAA;;AAAoB;;AAApB;AADJ;AAGO;;AAAA;;AAAA;AAAP;AAE+C;;AAAA;;AAAA;AAAA;;AAAtB;AAAA;;AAEjC;;;AACY;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAIG;;AAAA;AAAA;AAAA;AAAP;AAAA;AAFI;AAAA;;AAAA;AAAA;;;;AAc2C;;AAAtB;AAAA;AAAA;AACzB;AAAA;AAES;AACI;;;;;;AADJ;;;AAGD;;;AAHC;;;AAMO;;AAAc;AAA9B;AAAA;AAEA",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -503,146 +503,131 @@
     "114": {
       "op": "gtxns Sender",
       "defined_out": [
-        "tmp%3#0",
-        "tmp%5#0"
+        "materialized_values%0#0",
+        "tmp%3#0"
       ],
       "stack_out": [
         "tmp%3#0",
-        "tmp%5#0"
+        "materialized_values%0#0"
       ]
     },
     "116": {
       "op": "dup",
-      "defined_out": [
-        "tmp%3#0",
-        "tmp%5#0"
-      ],
       "stack_out": [
         "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0"
+        "materialized_values%0#0",
+        "materialized_values%0#0"
       ]
     },
     "117": {
+      "op": "cover 2",
+      "defined_out": [
+        "materialized_values%0#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0",
+        "tmp%3#0",
+        "materialized_values%0#0"
+      ]
+    },
+    "119": {
       "op": "box_get",
       "defined_out": [
         "deposited#0",
+        "materialized_values%0#0",
         "maybe_value%0#0",
-        "tmp%3#0",
-        "tmp%5#0"
+        "tmp%3#0"
       ],
       "stack_out": [
+        "materialized_values%0#0",
         "tmp%3#0",
-        "tmp%5#0",
         "maybe_value%0#0",
-        "deposited#0"
-      ]
-    },
-    "118": {
-      "op": "bury 1",
-      "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
         "deposited#0"
       ]
     },
     "120": {
-      "op": "bz deposit_else_body@2",
+      "op": "bury 1",
       "stack_out": [
+        "materialized_values%0#0",
         "tmp%3#0",
-        "tmp%5#0"
+        "deposited#0"
       ]
     },
-    "123": {
-      "op": "frame_dig 1",
+    "122": {
+      "op": "bz deposit_else_body@2",
       "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0"
+        "materialized_values%0#0",
+        "tmp%3#0"
       ]
     },
     "125": {
-      "op": "dup",
-      "defined_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0 (copy)"
-      ],
+      "op": "frame_dig 0",
       "stack_out": [
+        "materialized_values%0#0",
         "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0",
-        "tmp%5#0 (copy)"
-      ]
-    },
-    "126": {
-      "op": "box_get",
-      "defined_out": [
-        "maybe_exists%1#0",
-        "maybe_value%1#0",
-        "tmp%3#0",
-        "tmp%5#0"
-      ],
-      "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0",
-        "maybe_value%1#0",
-        "maybe_exists%1#0"
+        "materialized_values%0#0"
       ]
     },
     "127": {
-      "op": "swap",
+      "op": "dup",
+      "defined_out": [
+        "materialized_values%0#0",
+        "materialized_values%0#0 (copy)",
+        "tmp%3#0"
+      ],
       "stack_out": [
+        "materialized_values%0#0",
         "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0",
-        "maybe_exists%1#0",
-        "maybe_value%1#0"
+        "materialized_values%0#0",
+        "materialized_values%0#0 (copy)"
       ]
     },
     "128": {
-      "op": "btoi",
+      "op": "box_get",
       "defined_out": [
+        "materialized_values%0#0",
         "maybe_exists%1#0",
-        "maybe_value_converted%1#0",
-        "tmp%3#0",
-        "tmp%5#0"
+        "maybe_value%1#0",
+        "tmp%3#0"
       ],
       "stack_out": [
+        "materialized_values%0#0",
         "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0",
-        "maybe_exists%1#0",
-        "maybe_value_converted%1#0"
-      ]
-    },
-    "129": {
-      "op": "swap",
-      "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0",
-        "maybe_value_converted%1#0",
+        "materialized_values%0#0",
+        "maybe_value%1#0",
         "maybe_exists%1#0"
       ]
     },
-    "130": {
+    "129": {
       "error": "check self.depositors entry exists",
       "op": "assert // check self.depositors entry exists",
       "stack_out": [
+        "materialized_values%0#0",
         "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0",
+        "materialized_values%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "130": {
+      "op": "btoi",
+      "defined_out": [
+        "materialized_values%0#0",
+        "maybe_value_converted%1#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0",
+        "tmp%3#0",
+        "materialized_values%0#0",
         "maybe_value_converted%1#0"
       ]
     },
     "131": {
-      "op": "frame_dig 0",
+      "op": "uncover 2",
       "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0",
+        "materialized_values%0#0",
+        "materialized_values%0#0",
         "maybe_value_converted%1#0",
         "tmp%3#0"
       ]
@@ -650,191 +635,144 @@
     "133": {
       "op": "+",
       "defined_out": [
-        "new_box_value%0#0",
-        "tmp%3#0",
-        "tmp%5#0"
+        "materialized_values%0#0",
+        "materialized_values%2#0"
       ],
       "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0",
-        "new_box_value%0#0"
+        "materialized_values%0#0",
+        "materialized_values%0#0",
+        "materialized_values%2#0"
       ]
     },
     "134": {
       "op": "itob",
       "defined_out": [
-        "new_box_value%1#0",
-        "tmp%3#0",
-        "tmp%5#0"
+        "encoded_value%0#0",
+        "materialized_values%0#0"
       ],
       "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0",
-        "new_box_value%1#0"
+        "materialized_values%0#0",
+        "materialized_values%0#0",
+        "encoded_value%0#0"
       ]
     },
     "135": {
       "op": "box_put",
       "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0"
+        "materialized_values%0#0"
       ]
     },
     "136": {
       "block": "deposit_after_if_else@3",
       "stack_in": [
-        "tmp%3#0",
-        "tmp%5#0"
+        "materialized_values%0#0"
       ],
-      "op": "frame_dig 1",
+      "op": "frame_dig 0",
       "defined_out": [
-        "tmp%5#0"
+        "materialized_values%0#0"
       ],
       "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0"
+        "materialized_values%0#0",
+        "materialized_values%0#0"
       ]
     },
     "138": {
       "op": "box_get",
       "defined_out": [
+        "materialized_values%0#0",
         "maybe_exists%2#0",
-        "maybe_value%2#0",
-        "tmp%5#0"
+        "maybe_value%2#0"
       ],
       "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
+        "materialized_values%0#0",
         "maybe_value%2#0",
         "maybe_exists%2#0"
       ]
     },
     "139": {
-      "op": "swap",
+      "error": "check self.depositors entry exists",
+      "op": "assert // check self.depositors entry exists",
       "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "maybe_exists%2#0",
+        "materialized_values%0#0",
         "maybe_value%2#0"
       ]
     },
     "140": {
       "op": "btoi",
       "defined_out": [
-        "maybe_exists%2#0",
-        "maybe_value_converted%2#0",
-        "tmp%5#0"
+        "materialized_values%0#0",
+        "maybe_value_converted%2#0"
       ],
       "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "maybe_exists%2#0",
+        "materialized_values%0#0",
         "maybe_value_converted%2#0"
       ]
     },
     "141": {
-      "op": "swap",
-      "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "maybe_value_converted%2#0",
-        "maybe_exists%2#0"
-      ]
+      "op": "swap"
     },
     "142": {
-      "error": "check self.depositors entry exists",
-      "op": "assert // check self.depositors entry exists",
-      "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "maybe_value_converted%2#0"
-      ]
-    },
-    "143": {
-      "op": "frame_bury 0"
-    },
-    "145": {
       "retsub": true,
       "op": "retsub"
     },
-    "146": {
+    "143": {
       "block": "deposit_else_body@2",
       "stack_in": [
-        "tmp%3#0",
-        "tmp%5#0"
-      ],
-      "op": "frame_dig 0",
-      "defined_out": [
+        "materialized_values%0#0",
         "tmp%3#0"
+      ],
+      "op": "itob",
+      "defined_out": [
+        "encoded_value%1#0"
       ],
       "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "tmp%3#0"
+        "materialized_values%0#0",
+        "encoded_value%1#0"
+      ]
+    },
+    "144": {
+      "op": "frame_dig 0",
+      "defined_out": [
+        "encoded_value%1#0",
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0",
+        "encoded_value%1#0",
+        "materialized_values%0#0"
+      ]
+    },
+    "146": {
+      "op": "swap",
+      "stack_out": [
+        "materialized_values%0#0",
+        "materialized_values%0#0",
+        "encoded_value%1#0"
+      ]
+    },
+    "147": {
+      "op": "box_put",
+      "stack_out": [
+        "materialized_values%0#0"
       ]
     },
     "148": {
-      "op": "itob",
-      "defined_out": [
-        "new_box_value%3#0",
-        "tmp%3#0"
-      ],
-      "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "new_box_value%3#0"
-      ]
-    },
-    "149": {
-      "op": "frame_dig 1",
-      "defined_out": [
-        "new_box_value%3#0",
-        "tmp%3#0",
-        "tmp%5#0"
-      ],
-      "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "new_box_value%3#0",
-        "tmp%5#0"
-      ]
-    },
-    "151": {
-      "op": "swap",
-      "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0",
-        "tmp%5#0",
-        "new_box_value%3#0"
-      ]
-    },
-    "152": {
-      "op": "box_put",
-      "stack_out": [
-        "tmp%3#0",
-        "tmp%5#0"
-      ]
-    },
-    "153": {
       "op": "b deposit_after_if_else@3"
     },
-    "156": {
+    "151": {
       "subroutine": "smart_contracts.personal_bank.contract.PersonalBank.withdraw",
       "params": {},
       "block": "withdraw",
       "stack_in": [],
       "op": "txn Sender",
       "defined_out": [
-        "tmp%0#0"
+        "materialized_values%0#0"
       ],
       "stack_out": [
-        "tmp%0#0"
+        "materialized_values%0#0"
       ]
     },
-    "158": {
+    "153": {
       "op": "box_get",
       "defined_out": [
         "deposited#0",
@@ -845,14 +783,14 @@
         "deposited#0"
       ]
     },
-    "159": {
+    "154": {
       "op": "swap",
       "stack_out": [
         "deposited#0",
         "maybe_value%0#0"
       ]
     },
-    "160": {
+    "155": {
       "op": "btoi",
       "defined_out": [
         "deposit_amt#0",
@@ -863,24 +801,24 @@
         "deposit_amt#0"
       ]
     },
-    "161": {
+    "156": {
       "op": "swap",
       "stack_out": [
         "deposit_amt#0",
         "deposited#0"
       ]
     },
-    "162": {
+    "157": {
       "error": "No deposits found for this account",
       "op": "assert // No deposits found for this account",
       "stack_out": [
         "deposit_amt#0"
       ]
     },
-    "163": {
+    "158": {
       "op": "itxn_begin"
     },
-    "164": {
+    "159": {
       "op": "txn Sender",
       "defined_out": [
         "deposit_amt#0",
@@ -891,14 +829,14 @@
         "inner_txn_params%0%%param_Receiver_idx_0#0"
       ]
     },
-    "166": {
+    "161": {
       "op": "itxn_field Receiver"
     },
-    "168": {
+    "163": {
       "op": "itxn_field Amount",
       "stack_out": []
     },
-    "170": {
+    "165": {
       "op": "intc_0 // pay",
       "defined_out": [
         "pay"
@@ -907,11 +845,11 @@
         "pay"
       ]
     },
-    "171": {
+    "166": {
       "op": "itxn_field TypeEnum",
       "stack_out": []
     },
-    "173": {
+    "168": {
       "op": "intc_1 // 0",
       "defined_out": [
         "0"
@@ -920,14 +858,14 @@
         "0"
       ]
     },
-    "174": {
+    "169": {
       "op": "itxn_field Fee",
       "stack_out": []
     },
-    "176": {
+    "171": {
       "op": "itxn_submit"
     },
-    "177": {
+    "172": {
       "op": "itxn Amount",
       "defined_out": [
         "result.Amount#0"
@@ -936,45 +874,45 @@
         "result.Amount#0"
       ]
     },
-    "179": {
+    "174": {
       "op": "txn Sender",
       "defined_out": [
-        "result.Amount#0",
-        "tmp%2#0"
+        "materialized_values%1#0",
+        "result.Amount#0"
       ],
       "stack_out": [
         "result.Amount#0",
-        "tmp%2#0"
+        "materialized_values%1#0"
       ]
     },
-    "181": {
+    "176": {
       "op": "intc_1 // 0",
       "stack_out": [
         "result.Amount#0",
-        "tmp%2#0",
+        "materialized_values%1#0",
         "0"
       ]
     },
-    "182": {
+    "177": {
       "op": "itob",
       "defined_out": [
-        "new_box_value%0#0",
-        "result.Amount#0",
-        "tmp%2#0"
+        "encoded_value%0#0",
+        "materialized_values%1#0",
+        "result.Amount#0"
       ],
       "stack_out": [
         "result.Amount#0",
-        "tmp%2#0",
-        "new_box_value%0#0"
+        "materialized_values%1#0",
+        "encoded_value%0#0"
       ]
     },
-    "183": {
+    "178": {
       "op": "box_put",
       "stack_out": [
         "result.Amount#0"
       ]
     },
-    "184": {
+    "179": {
       "retsub": true,
       "op": "retsub"
     }
